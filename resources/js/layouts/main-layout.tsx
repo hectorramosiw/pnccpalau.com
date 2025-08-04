@@ -12,6 +12,7 @@ import MainFooter from '@/components/main-footer';
 import { cn } from '@/lib/utils';
 import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
+import { ArrowRight } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
 
 const ListItem = React.forwardRef<
@@ -107,16 +108,22 @@ export default function MainLayout({ children }: PropsWithChildren) {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    <Link href={route('dashboard')} className="font-semibold">
-                                        <NavigationMenuLink
-                                            className={cn(
-                                                navigationMenuTriggerStyle(),
-                                                'bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500',
-                                            )}
-                                        >
+                                    <NavigationMenuLink
+                                        className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            'rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500',
+                                        )}
+                                        href="https://pnccpalau.smarthub.coop/Login.html"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <span className="flex items-center">
                                             MyPNCC
-                                        </NavigationMenuLink>
-                                    </Link>
+                                            <span className="ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-black">
+                                                <ArrowRight className="h-5 w-5 text-white" />
+                                            </span>
+                                        </span>
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
