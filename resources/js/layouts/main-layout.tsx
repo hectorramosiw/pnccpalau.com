@@ -36,20 +36,24 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = 'ListItem';
 
-export default function MainPublicLayout({ children }: PropsWithChildren) {
+export default function MainLayout({ children }: PropsWithChildren) {
     const { auth } = usePage<SharedData>().props;
 
     return (
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-border/40">
-                <div className="container flex h-14 max-w-screen-2xl items-center">
-                    <div className="mr-4 hidden md:flex">
-                        <Link href="/" className="mr-6 flex items-center space-x-2">
-                            <span className="hidden font-bold sm:inline-block">PNCC Palau</span>
-                        </Link>
+                <div className="container flex h-14 max-w-screen-2xl items-center mx-auto">
+                    {/* Left Aligned Logo */}
+                    <div className="flex flex-1 justify-start">
+                        <div className="mr-4 hidden md:flex">
+                            <Link href="/" className="mr-6 flex items-center space-x-2">
+                                <img src="/logo.svg" alt="PNCC Palau Logo" className="h-8 w-auto" />
+                            </Link>
+                        </div>
                     </div>
 
-                    <div className="flex flex-1 items-center justify-end space-x-2">
+                    {/* Centered Navigation */}
+                    <div className="flex justify-center">
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
@@ -93,16 +97,26 @@ export default function MainPublicLayout({ children }: PropsWithChildren) {
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
 
-                                {auth.user && (
-                                    <NavigationMenuItem>
-                                        <Link href={route('dashboard')}>
-                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                                Dashboard
-                                            </NavigationMenuLink>
-                                        </Link>
-                                    </NavigationMenuItem>
-                                )}
+                    {/* Right Aligned User Actions */}
+                    <div className="flex flex-1 items-center justify-end">
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <Link href={route('dashboard')} className="font-semibold">
+                                        <NavigationMenuLink
+                                            className={cn(
+                                                navigationMenuTriggerStyle(),
+                                                'bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500',
+                                            )}
+                                        >
+                                            MyPNCC
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
