@@ -8,6 +8,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import MainFooter from '@/components/main-footer';
 import { cn } from '@/lib/utils';
 import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
@@ -123,6 +124,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
                 </div>
             </header>
             <main className="flex flex-1 flex-col">{children}</main>
+            <MainFooter />
         </div>
     );
 }

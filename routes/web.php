@@ -51,6 +51,22 @@ Route::get('/about-pncc', function () {
     return Inertia::render('index');
 })->name('about-pncc');
 
+Route::get('/site-map', function () {
+    return Inertia::render('index');
+})->name('site.map');
+
+Route::get('/general-policies', function () {
+    return Inertia::render('index');
+})->name('general.policies');
+
+Route::get('/subscribe-to-newsletter', function () {
+    return Inertia::render('index');
+})->name('subscribe.newsletter');
+
+Route::get('/rfp', function () {
+    return Inertia::render('index');
+})->name('rfp');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
