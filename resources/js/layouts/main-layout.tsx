@@ -8,14 +8,22 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from '@/components/ui/sheet';
 import MainFooter from '@/components/main-footer';
 import { cn } from '@/lib/utils';
 import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Menu } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
 import { Button } from '@/components/ui/button';
 
+// Helper component for list items in the navigation menu
 const ListItem = React.forwardRef<
     HTMLAnchorElement,
     React.ComponentPropsWithoutRef<typeof Link> & { title: string }
@@ -39,7 +47,58 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = 'ListItem';
 
-export default function MainLayout({ children }: PropsWithChildren) {
+// Mobile menu list item
+const MobileListItem = React.forwardRef<
+  HTMLAnchorElement,
+  React.ComponentPropsWithoutRef<typeof Link> & { title: string }
+>(({ className, title, ...props }, ref) => {
+  return (
+    <li>
+      <Link
+        ref={ref}
+        className={cn(
+          'block select-none rounded-md p-3 text-sm font-medium no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+          className,
+        )}
+        {...props}
+      >
+        {title}
+      </Link>
+    </li>
+  );
+});
+MobileListItem.displayName = 'MobileListItem';
+
+// Define the navigation links in a data structure for better maintainability
+const mainNavLinks = [
+  {
+    title: 'Business',
+    href: route('business'),
+  },
+  {
+    title: 'Visitors',
+    href: route('visitors'),
+  },
+  {
+    title: 'Online Store',
+    href: route('online-store'),
+  },
+  {
+    title: 'About PNCC',
+    href: route('about-pncc'),
+  },
+];
+
+const residentialLinks = [
+  { href: route('residential.mobile'), title: 'Mobile' },
+  { href: route('residential.internet'), title: 'Internet' },
+  { href: route('residential.telephone'), title: 'Telephone' },
+  { href: route('residential.digital-tv'), title: 'Digital TV' },
+  { href: route('residential.special-offers'), title: 'Special Offers & Bundles' },
+  { href: route('residential.4g-wifi-rental'), title: '4G WiFi Rental' },
+];
+
+export default function App({ children }: PropsWithChildren) {
     const { auth } = usePage<SharedData>().props;
 
     return (
@@ -48,7 +107,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
                 <div className="container flex h-14 max-w-screen-2xl items-center mx-auto">
                     {/* [Logo] ::start */}
                     <div className="flex flex-1 justify-start">
-                        <div className="mr-4 hidden md:flex">
+                        <div className="mr-4">
                             <Link href="/" className="mr-6 flex items-center space-x-2">
                                 <img src="/logo.svg" alt="PNCC Palau Logo" className="h-8 w-auto" />
                             </Link>
@@ -56,51 +115,63 @@ export default function MainLayout({ children }: PropsWithChildren) {
                     </div>
                     {/* [Logo] ::end */}
 
+                    {/* [Mobile Navigation] ::start */}
+                    <div className="flex justify-start md:hidden">
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  className="flex items-center"
+                                >
+                                    <Menu className="h-6 w-6" />
+                                    <span className="sr-only">Open main menu</span>
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="left">
+                                <SheetHeader>
+                                    <SheetTitle>PNCC Palau</SheetTitle>
+                                </SheetHeader>
+                                <div className="flex flex-col gap-2 p-4">
+                                    <h4 className="text-lg font-bold">Residential & Personal</h4>
+                                    <ul>
+                                        {residentialLinks.map((link) => (
+                                            <MobileListItem key={link.title} href={link.href} title={link.title} />
+                                        ))}
+                                    </ul>
+                                    {mainNavLinks.map((link) => (
+                                        <MobileListItem key={link.title} href={link.href} title={link.title} />
+                                    ))}
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                    {/* [Mobile Navigation] ::end */}
+
+
                     {/* [Main Navigation | ShadcnUI > Navigation Menu] ::start */}
-                    <div className="flex justify-center">
+                    <div className="hidden justify-center md:flex">
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger>Residential & Personal</NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid w-[250px] gap-3 p-4">
-                                            <ListItem href={route('residential.mobile')} title="Mobile" />
-                                            <ListItem href={route('residential.internet')} title="Internet" />
-                                            <ListItem href={route('residential.telephone')} title="Telephone" />
-                                            <ListItem href={route('residential.digital-tv')} title="Digital TV" />
-                                            <ListItem href={route('residential.special-offers')} title="Special Offers & Bundles" />
-                                            <ListItem href={route('residential.4g-wifi-rental')} title="4G WiFi Rental" />
+                                            {residentialLinks.map((link) => (
+                                                <ListItem key={link.title} href={link.href} title={link.title} />
+                                            ))}
                                         </ul>
                                     </NavigationMenuContent>
                                 </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <Link href={route('business')}>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            Business
-                                        </NavigationMenuLink>
-                                    </Link>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <Link href={route('visitors')}>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            Visitors
-                                        </NavigationMenuLink>
-                                    </Link>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <Link href={route('online-store')}>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            Online Store
-                                        </NavigationMenuLink>
-                                    </Link>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <Link href={route('about-pncc')}>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            About PNCC
-                                        </NavigationMenuLink>
-                                    </Link>
-                                </NavigationMenuItem>
+                                {mainNavLinks.map((link) => (
+                                    <NavigationMenuItem key={link.title}>
+                                        <Link href={link.href}>
+                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                                {link.title}
+                                            </NavigationMenuLink>
+                                        </Link>
+                                    </NavigationMenuItem>
+                                ))}
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
@@ -130,3 +201,4 @@ export default function MainLayout({ children }: PropsWithChildren) {
         </div>
     );
 }
+
