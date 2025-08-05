@@ -32,12 +32,12 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        'block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300',
+                        'block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5',
                         className,
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
+                    <div className="font-bold text-base leading-none">{title}</div>
                 </a>
             </NavigationMenuLink>
         </li>
@@ -55,7 +55,7 @@ const MobileListItem = React.forwardRef<
       <a
         ref={ref}
         className={cn(
-          'block select-none rounded-md p-3 text-sm font-medium no-underline outline-none transition-colors hover:bg-white/10 hover:text-yellow-400 focus:bg-white/10 focus:text-yellow-400',
+          'block select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-white/10 hover:text-yellow-400 focus:bg-white/10 focus:text-yellow-400 font-bold text-base',
           className,
         )}
         {...props}
@@ -150,11 +150,11 @@ export default function App({ children }: PropsWithChildren) {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400 py-10">
+                                    <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400 py-10 font-extrabold text-base">
                                         Residential & Personal
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent className="bg-[#f5f5f5] text-white rounded-none p-0">
-                                        <ul className="grid w-[250px] gap-3 py-4 rounded-none">
+                                        <ul className="grid w-[250px] gap-0 py-4 rounded-none">
                                             {residentialLinks.map((link) => (
                                                 <ListItem key={link.title} href={link.href} title={link.title} />
                                             ))}
@@ -164,7 +164,7 @@ export default function App({ children }: PropsWithChildren) {
                                 {mainNavLinks.map((link) => (
                                     <NavigationMenuItem key={link.title}>
                                         <a href={link.href}>
-                                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'bg-transparent text-white hover:bg-transparent hover:text-yellow-400 py-10')}>
+                                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'bg-transparent text-white hover:bg-transparent hover:text-yellow-400 py-10 font-extrabold text-base')}>
                                                 {link.title}
                                             </NavigationMenuLink>
                                         </a>
