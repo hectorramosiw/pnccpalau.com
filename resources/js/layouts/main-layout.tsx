@@ -17,8 +17,6 @@ import {
 } from '@/components/ui/sheet';
 import MainFooter from '@/components/main-footer';
 import { cn } from '@/lib/utils';
-import { type SharedData } from '@/types';
-import { Link, usePage } from '@inertiajs/react';
 import { ArrowRight, Menu } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
 import { Button } from '@/components/ui/button';
@@ -26,21 +24,21 @@ import { Button } from '@/components/ui/button';
 // Helper component for list items in the navigation menu
 const ListItem = React.forwardRef<
     HTMLAnchorElement,
-    React.ComponentPropsWithoutRef<typeof Link> & { title: string }
+    React.ComponentPropsWithoutRef<'a'> & { title: string }
 >(({ className, title, ...props }, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>
-                <Link
+                <a
                     ref={ref}
                     className={cn(
-                        'block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+                        'block select-none rounded-none p-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300',
                         className,
                     )}
                     {...props}
                 >
                     <div className="text-sm font-medium leading-none">{title}</div>
-                </Link>
+                </a>
             </NavigationMenuLink>
         </li>
     );
@@ -50,20 +48,20 @@ ListItem.displayName = 'ListItem';
 // Mobile menu list item
 const MobileListItem = React.forwardRef<
   HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<typeof Link> & { title: string }
+  React.ComponentPropsWithoutRef<'a'> & { title: string }
 >(({ className, title, ...props }, ref) => {
   return (
     <li>
-      <Link
+      <a
         ref={ref}
         className={cn(
-          'block select-none rounded-md p-3 text-sm font-medium no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+          'block select-none rounded-md p-3 text-sm font-medium no-underline outline-none transition-colors hover:bg-white/10 hover:text-yellow-400 focus:bg-white/10 focus:text-yellow-400',
           className,
         )}
         {...props}
       >
         {title}
-      </Link>
+      </a>
     </li>
   );
 });
@@ -73,44 +71,42 @@ MobileListItem.displayName = 'MobileListItem';
 const mainNavLinks = [
   {
     title: 'Business',
-    href: route('business'),
+    href: '#',
   },
   {
     title: 'Visitors',
-    href: route('visitors'),
+    href: '#',
   },
   {
     title: 'Online Store',
-    href: route('online-store'),
+    href: '#',
   },
   {
     title: 'About PNCC',
-    href: route('about-pncc'),
+    href: '#',
   },
 ];
 
 const residentialLinks = [
-  { href: route('residential.mobile'), title: 'Mobile' },
-  { href: route('residential.internet'), title: 'Internet' },
-  { href: route('residential.telephone'), title: 'Telephone' },
-  { href: route('residential.digital-tv'), title: 'Digital TV' },
-  { href: route('residential.special-offers'), title: 'Special Offers & Bundles' },
-  { href: route('residential.4g-wifi-rental'), title: '4G WiFi Rental' },
+  { href: '#', title: 'Mobile' },
+  { href: '#', title: 'Internet' },
+  { href: '#', title: 'Telephone' },
+  { href: '#', title: 'Digital TV' },
+  { href: '#', title: 'Special Offers & Bundles' },
+  { href: '#', title: '4G WiFi Rental' },
 ];
 
 export default function App({ children }: PropsWithChildren) {
-    const { auth } = usePage<SharedData>().props;
-
     return (
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
-            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-border/40">
-                <div className="container flex h-14 max-w-screen-2xl items-center mx-auto">
+            <header className="sticky top-0 z-50 w-full border-b border-transparent">
+                <div className="container flex h-14 max-w-screen-2xl items-center mx-auto bg-[#0a2239] text-white rounded-sm px-2">
                     {/* [Logo] ::start */}
                     <div className="flex flex-1 justify-start">
                         <div className="mr-4">
-                            <Link href="/" className="mr-6 flex items-center space-x-2">
+                            <a href="#" className="mr-6 flex items-center space-x-2">
                                 <img src="/logo.svg" alt="PNCC Palau Logo" className="h-8 w-auto" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     {/* [Logo] ::end */}
@@ -122,15 +118,15 @@ export default function App({ children }: PropsWithChildren) {
                                 <Button
                                   variant="ghost"
                                   size="icon"
-                                  className="flex items-center"
+                                  className="flex items-center text-white hover:text-yellow-400"
                                 >
                                     <Menu className="h-6 w-6" />
                                     <span className="sr-only">Open main menu</span>
                                 </Button>
                             </SheetTrigger>
-                            <SheetContent side="left">
+                            <SheetContent side="left" className="bg-[#0a2239] text-white">
                                 <SheetHeader>
-                                    <SheetTitle>PNCC Palau</SheetTitle>
+                                    <SheetTitle className="text-white">PNCC Palau</SheetTitle>
                                 </SheetHeader>
                                 <div className="flex flex-col gap-2 p-4">
                                     <h4 className="text-lg font-bold">Residential & Personal</h4>
@@ -154,9 +150,11 @@ export default function App({ children }: PropsWithChildren) {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    <NavigationMenuTrigger>Residential & Personal</NavigationMenuTrigger>
-                                    <NavigationMenuContent>
-                                        <ul className="grid w-[250px] gap-3 p-4">
+                                    <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400">
+                                        Residential & Personal
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent className="bg-[#f5f5f5] text-white rounded-none p-0">
+                                        <ul className="grid w-[250px] gap-3 py-4 rounded-none">
                                             {residentialLinks.map((link) => (
                                                 <ListItem key={link.title} href={link.href} title={link.title} />
                                             ))}
@@ -165,11 +163,11 @@ export default function App({ children }: PropsWithChildren) {
                                 </NavigationMenuItem>
                                 {mainNavLinks.map((link) => (
                                     <NavigationMenuItem key={link.title}>
-                                        <Link href={link.href}>
-                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                        <a href={link.href}>
+                                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'bg-transparent text-white hover:bg-transparent hover:text-yellow-400')}>
                                                 {link.title}
                                             </NavigationMenuLink>
-                                        </Link>
+                                        </a>
                                     </NavigationMenuItem>
                                 ))}
                             </NavigationMenuList>
@@ -196,9 +194,10 @@ export default function App({ children }: PropsWithChildren) {
                 </div>
             </header>
             <main className="flex flex-1 flex-col">{children}</main>
-            
+
+            {/* [Main Footer] ::start */}
             <MainFooter />
+            {/* [Main Footer] ::end */}
         </div>
     );
 }
-
