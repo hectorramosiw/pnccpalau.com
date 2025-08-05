@@ -14,6 +14,7 @@ import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
 import { ArrowRight } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
+import { Button } from '@/components/ui/button';
 
 const ListItem = React.forwardRef<
     HTMLAnchorElement,
@@ -45,7 +46,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-border/40">
                 <div className="container flex h-14 max-w-screen-2xl items-center mx-auto">
-                    {/* Left Aligned Logo */}
+                    {/* [Logo] ::start */}
                     <div className="flex flex-1 justify-start">
                         <div className="mr-4 hidden md:flex">
                             <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -53,8 +54,9 @@ export default function MainLayout({ children }: PropsWithChildren) {
                             </Link>
                         </div>
                     </div>
+                    {/* [Logo] ::end */}
 
-                    {/* Centered Navigation */}
+                    {/* [Main Navigation | ShadcnUI > Navigation Menu] ::start */}
                     <div className="flex justify-center">
                         <NavigationMenu>
                             <NavigationMenuList>
@@ -102,35 +104,28 @@ export default function MainLayout({ children }: PropsWithChildren) {
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
+                    {/* [Main Navigation | ShadcnUI > Navigation Menu] ::end */}
 
-                    {/* Right Aligned User Actions */}
+                    {/* [MyPNCC Button | ShadcnUI > Button] ::start */}
                     <div className="flex flex-1 items-center justify-end">
-                        <NavigationMenu>
-                            <NavigationMenuList>
-                                <NavigationMenuItem>
-                                    <NavigationMenuLink
-                                        className={cn(
-                                            navigationMenuTriggerStyle(),
-                                            'rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500',
-                                        )}
-                                        href="https://pnccpalau.smarthub.coop/Login.html"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <span className="flex items-center">
-                                            MyPNCC
-                                            <span className="ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-black">
-                                                <ArrowRight className="h-5 w-5 text-white" />
-                                            </span>
-                                        </span>
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
-                            </NavigationMenuList>
-                        </NavigationMenu>
+                        <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500">
+                            <a
+                                href="https://pnccpalau.smarthub.coop/Login.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                MyPNCC
+                                <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
+                                    <ArrowRight className="h-2 w-2 text-white" />
+                                </span>
+                            </a>
+                        </Button>
                     </div>
+                    {/* [MyPNCC Button | ShadcnUI > Button] ::end */}
                 </div>
             </header>
             <main className="flex flex-1 flex-col">{children}</main>
+            
             <MainFooter />
         </div>
     );
