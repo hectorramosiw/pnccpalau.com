@@ -32,7 +32,7 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        'block select-none rounded-none p-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300',
+                        'block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300',
                         className,
                     )}
                     {...props}
@@ -100,12 +100,12 @@ export default function App({ children }: PropsWithChildren) {
     return (
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
             <header className="sticky top-0 z-50 w-full border-b border-transparent">
-                <div className="container flex h-14 max-w-screen-2xl items-center mx-auto bg-[#0a2239] text-white rounded-sm px-2">
+                <div className="container flex max-w-screen-2xl items-center mx-auto bg-[#0a2239] text-white rounded-sm px-2">
                     {/* [Logo] ::start */}
                     <div className="flex flex-1 justify-start">
                         <div className="mr-4">
-                            <a href="#" className="mr-6 flex items-center space-x-2">
-                                <img src="/logo.svg" alt="PNCC Palau Logo" className="h-8 w-auto" />
+                            <a href="/" className="mr-6 flex items-center space-x-2">
+                                <img src="/logo.svg" alt="PNCC Palau Logo" className="h-22 w-auto" />
                             </a>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ export default function App({ children }: PropsWithChildren) {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400">
+                                    <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400 py-10">
                                         Residential & Personal
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent className="bg-[#f5f5f5] text-white rounded-none p-0">
@@ -164,7 +164,7 @@ export default function App({ children }: PropsWithChildren) {
                                 {mainNavLinks.map((link) => (
                                     <NavigationMenuItem key={link.title}>
                                         <a href={link.href}>
-                                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'bg-transparent text-white hover:bg-transparent hover:text-yellow-400')}>
+                                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'bg-transparent text-white hover:bg-transparent hover:text-yellow-400 py-10')}>
                                                 {link.title}
                                             </NavigationMenuLink>
                                         </a>
