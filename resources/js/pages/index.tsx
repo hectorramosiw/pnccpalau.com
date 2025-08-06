@@ -40,7 +40,7 @@ export default function Index() {
                                 <div className="flex flex-col md:flex-row items-center justify-items-center">
                                     <div className="w-full md:w-[60%] p-4">
                                         <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <p className="mt-5 text-black">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
                                         <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
                                             <a
                                                 href="https://pnccpalau.smarthub.coop/Login.html"
@@ -63,7 +63,7 @@ export default function Index() {
                                 <div className="flex flex-col md:flex-row items-center justify-items-center">
                                     <div className="w-full md:w-[60%] p-4">
                                         <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <p className="mt-5 text-black">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
                                         <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
                                             <a
                                                 href="https://pnccpalau.smarthub.coop/Login.html"
@@ -86,7 +86,7 @@ export default function Index() {
                                 <div className="flex flex-col md:flex-row items-center justify-items-center">
                                     <div className="w-full md:w-[60%] p-4">
                                         <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <p className="mt-5 text-black">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
                                         <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
                                             <a
                                                 href="https://pnccpalau.smarthub.coop/Login.html"
@@ -199,22 +199,22 @@ export default function Index() {
                     <h2 className="text-3xl md:text-6xl font-extrabold text-center text-[#2babe2]">Let's Connect</h2>
                     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="flex flex-col items-center text-center p-6">
-                            <Phone className="w-12 h-auto mb-2"/>
-                            <h3 className="text-lg font-normal mb-0">Aria HQ</h3>
+                            <Phone className="w-12 h-auto mb-2 text-black"/>
+                            <h3 className="text-lg text-black font-normal mb-0">Aria HQ</h3>
                             <p>
                                 <a href="tel:+6805879000" className="text-[#f96166] font-extrabold text-xl">680 587-9000</a>
                             </p>
                         </div>
                         <div className="flex flex-col items-center text-center p-6">
-                            <MapPin className="w-12 h-auto mb-2"/>
-                            <h3 className="text-lg font-normal mb-0">Address</h3>
+                            <MapPin className="w-12 h-auto mb-2 text-black"/>
+                            <h3 className="text-lg text-black font-normal mb-0">Address</h3>
                             <p>
                                 <span className="text-[#f96166] font-extrabold text-xl">P.O. Box 99, Koror, PW 96940 Palau</span>
                             </p>
                         </div>
                         <div className="flex flex-col items-center text-center p-6">
-                            <Phone className="w-12 h-auto mb-2"/>
-                            <h3 className="text-lg font-normal mb-0">Korror Office</h3>
+                            <Phone className="w-12 h-auto mb-2 text-black"/>
+                            <h3 className="text-lg text-black font-normal mb-0">Korror Office</h3>
                             <p>
                                 <a href="tel:+6804889000" className="text-[#f96166] font-extrabold text-xl">680 488-9000</a>
                             </p>
