@@ -39,7 +39,8 @@ export default function App({ children }: PropsWithChildren) {
                             </SheetTrigger>
                             <SheetContent side="left" className="bg-[#0a2239] text-white">
                                 <SheetHeader>
-                                    <SheetTitle className="text-white">PNCC Palau</SheetTitle>
+                                    <SheetTitle className="text-white sr-only">PNCC Palau</SheetTitle>
+                                    <img src="/logo.svg" alt="PNCC Palau Logo" className="h-20 w-auto" />
                                 </SheetHeader>
                                 <div className="flex flex-col gap-2 p-4">
                                     <h4 className="text-lg font-bold">Residential & Personal</h4>
@@ -134,10 +135,10 @@ export default function App({ children }: PropsWithChildren) {
                                     <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400 py-10 font-extrabold text-base">
                                         Residential & Personal
                                     </NavigationMenuTrigger>
-                                    <NavigationMenuContent className="bg-[#f5f5f5] text-white rounded-none p-0">
+                                    <NavigationMenuContent>
                                         <ul className="grid w-[250px] gap-0 py-4 rounded-none">
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild> 
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
