@@ -25,7 +25,7 @@ import { Input } from "@/components/ui/input";
 export default function App({ children }: PropsWithChildren) {
     return (
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
-            <div className="sticky top-0 z-50 w-full border-b border-transparent">
+            <div className="sticky md:relative top-0 z-50 w-full border-b border-transparent bg-gray-100">
                 <div className="container mx-auto flex justify-between items-center w-full px-2">
                     {/* [Help and Support] ::start */}
                     <div className="mr-4">
