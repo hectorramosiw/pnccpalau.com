@@ -7,6 +7,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function Index() {
     return (
@@ -17,7 +18,16 @@ export default function Index() {
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
             </Head>
             <div className="container mx-auto">
-                <Carousel>
+                <Carousel 
+                    plugins={[
+                        Autoplay({
+                            delay: 2000,
+                        }),
+                    ]}
+                    opts={{
+                        loop: true,
+                    }}
+                >
                     <CarouselContent>
                         <CarouselItem>
                             <div className="items-center justify-center">
@@ -50,8 +60,8 @@ export default function Index() {
                             </div>
                         </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    {/* <CarouselPrevious />
+                    <CarouselNext /> */}
                 </Carousel>
             </div>
         </MainLayout>
