@@ -5,9 +5,9 @@ import { Separator } from '@/components/ui/separator';
 export default function MainFooter() {
     return (
         <footer className="bg-[#0a2239] text-white">
-            <div className="container mx-auto py-10">
+            <div className="container mx-auto py-10 px-4">
                 <div className="grid grid-cols-1 gap-8 text-sm md:grid-cols-4">
-                    <div className="space-y-4">
+                    <div className="flex flex-col items-center">
                         <Link href="/">
                             <img src="/logo.svg" alt="PNCC Palau Logo" className="h-24 w-auto" />
                         </Link>
