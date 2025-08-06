@@ -5,14 +5,14 @@ import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    server: {
-        host: true,
-        port: 5173,
-        hmr: {
-            host: '192.168.68.52', // Your specific local IP
-            clientPort: 5173, // Ensure this matches your Vite port
-        },
-    },
+    // server: {
+    //     host: true,
+    //     port: 5173,
+    //     hmr: {
+    //         host: '192.168.68.52', // Your specific local IP
+    //         clientPort: 5173, // Ensure this matches your Vite port
+    //     },
+    // },
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
