@@ -163,10 +163,10 @@ export default function App({ children }: PropsWithChildren) {
                                     <NavigationMenuTrigger className="bg-transparent text-white data-[state=open]:bg-transparent data-[state=open]:text-yellow-400 hover:bg-transparent hover:text-yellow-400 py-10 font-extrabold text-base">
                                         Residential & Personal
                                     </NavigationMenuTrigger>
-                                    <NavigationMenuContent>
-                                        <ul className="grid w-[250px] gap-0 py-4 rounded-none">
-                                            <li>
-                                                <NavigationMenuLink asChild> 
+                                    <NavigationMenuContent className="border-0 p-0">
+                                        <ul className="grid py-4 w-[250px] gap-0 p-0 rounded-none border-t-8 border-[#2fc5c0]">
+                                            <li className="rounded-none">
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
@@ -176,7 +176,7 @@ export default function App({ children }: PropsWithChildren) {
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
@@ -186,7 +186,7 @@ export default function App({ children }: PropsWithChildren) {
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
@@ -196,7 +196,7 @@ export default function App({ children }: PropsWithChildren) {
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
@@ -206,7 +206,7 @@ export default function App({ children }: PropsWithChildren) {
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
@@ -216,7 +216,7 @@ export default function App({ children }: PropsWithChildren) {
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
-                                                <NavigationMenuLink asChild>
+                                                <NavigationMenuLink asChild className="rounded-none">
                                                     <a
                                                         className="block select-none rounded-none px-3 leading-none no-underline outline-none transition-colors text-black hover:text-[#5f6f79] focus:text-[#5f6f79] hover:bg-gray-300 focus:bg-gray-300 font-bold text-lg py-5"
                                                         href="#"
