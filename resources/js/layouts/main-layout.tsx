@@ -17,14 +17,42 @@ import {
 } from '@/components/ui/sheet';
 import MainFooter from '@/components/main-footer';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Menu } from 'lucide-react';
+import { ArrowRight, Menu, Headset, Search } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from "@/components/ui/input";
 
 export default function App({ children }: PropsWithChildren) {
     return (
         <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
             <div className="sticky top-0 z-50 w-full border-b border-transparent">
+                <div className="container mx-auto flex justify-between items-center w-full px-2">
+                    {/* [Help and Support] ::start */}
+                    <div className="mr-4">
+                        <a
+                            href="https://pnccpalau.smarthub.coop/Login.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center py-3"
+                        >
+                            Help and Support
+                            <span className="ml-2 flex items-center justify-center">
+                                <Headset className="h-auto w-4 text-black" />
+                            </span>
+                        </a>
+                    </div>
+                    {/* [Help and Support] ::end */}
+
+                    {/* [Seatch] ::start */}
+                    <div className="flex items-center space-x-2">
+                        <Input
+                            type="search"
+                            placeholder="Search..."
+                        />
+                        <Search className="w-4 h-auto" />
+                    </div>
+                    {/* [Seatch] ::end */}
+                </div>
                 <div className="container flex max-w-screen-2xl items-center mx-auto bg-[#0a2239] text-white rounded-none md:rounded-lg px-2">
                     {/* [Mobile Header Layout (Hamburger menu left, Logo center, MyPNCC button right)] ::start */}
                     <div className="flex justify-between items-center w-full md:hidden">
@@ -252,7 +280,9 @@ export default function App({ children }: PropsWithChildren) {
                 </div>
             </div>
 
+            {/* [Main Content of your page] ::start */}
             <main className="flex flex-1 flex-col">{children}</main>
+            {/* [Main Content of your page] ::start */}
 
             {/* [Main Footer] ::start */}
             <MainFooter />
