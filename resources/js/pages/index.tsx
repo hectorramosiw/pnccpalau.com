@@ -23,93 +23,157 @@ export default function Index() {
             {/* [Header] ::end */}
 
             {/* [Carousel] ::start */}
-            <div className="container mx-auto">
-                <Carousel 
-                    plugins={[
-                        Autoplay({
-                            delay: 2000,
-                        }),
-                    ]}
-                    opts={{
-                        loop: true,
-                    }}
-                >
-                    <CarouselContent>
-                        <CarouselItem>
-                            <div className="flex flex-col md:flex-row items-center justify-items-center">
-                                <div className="w-full md:w-[60%] p-4">
-                                    <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                    <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
-                                    <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
-                                        <a
-                                            href="https://pnccpalau.smarthub.coop/Login.html"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Learn More
-                                            <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
-                                                <ArrowRight className="h-2 w-2 text-white" />
-                                            </span>
-                                        </a>
-                                    </Button>
+            <div className="w-screen">
+                <div className="container mx-auto">
+                    <Carousel 
+                        plugins={[
+                            Autoplay({
+                                delay: 2000,
+                            }),
+                        ]}
+                        opts={{
+                            loop: true,
+                        }}
+                    >
+                        <CarouselContent>
+                            <CarouselItem>
+                                <div className="flex flex-col md:flex-row items-center justify-items-center">
+                                    <div className="w-full md:w-[60%] p-4">
+                                        <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
+                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
+                                            <a
+                                                href="https://pnccpalau.smarthub.coop/Login.html"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Learn More
+                                                <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
+                                                    <ArrowRight className="h-2 w-2 text-white" />
+                                                </span>
+                                            </a>
+                                        </Button>
+                                    </div>
+                                    <div className="w-[40%] p-4 hidden md:block">
+                                        <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
+                                    </div>
                                 </div>
-                                <div className="w-[40%] p-4 hidden md:block">
-                                    <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <div className="flex flex-col md:flex-row items-center justify-items-center">
+                                    <div className="w-full md:w-[60%] p-4">
+                                        <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
+                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
+                                            <a
+                                                href="https://pnccpalau.smarthub.coop/Login.html"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Learn More
+                                                <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
+                                                    <ArrowRight className="h-2 w-2 text-white" />
+                                                </span>
+                                            </a>
+                                        </Button>
+                                    </div>
+                                    <div className="w-[40%] p-4 hidden md:block">
+                                        <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
+                                    </div>
                                 </div>
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div className="flex flex-col md:flex-row items-center justify-items-center">
-                                <div className="w-full md:w-[60%] p-4">
-                                    <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                    <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
-                                    <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
-                                        <a
-                                            href="https://pnccpalau.smarthub.coop/Login.html"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Learn More
-                                            <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
-                                                <ArrowRight className="h-2 w-2 text-white" />
-                                            </span>
-                                        </a>
-                                    </Button>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <div className="flex flex-col md:flex-row items-center justify-items-center">
+                                    <div className="w-full md:w-[60%] p-4">
+                                        <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
+                                        <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
+                                        <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
+                                            <a
+                                                href="https://pnccpalau.smarthub.coop/Login.html"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Learn More
+                                                <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
+                                                    <ArrowRight className="h-2 w-2 text-white" />
+                                                </span>
+                                            </a>
+                                        </Button>
+                                    </div>
+                                    <div className="w-[40%] p-4 hidden md:block">
+                                        <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
+                                    </div>
                                 </div>
-                                <div className="w-[40%] p-4 hidden md:block">
-                                    <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
-                                </div>
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div className="flex flex-col md:flex-row items-center justify-items-center">
-                                <div className="w-full md:w-[60%] p-4">
-                                    <h2 className="text-3xl md:text-6xl font-extrabold text-[#2babe2]">Maximize your mobile data with PNCC 4G Coverage</h2>
-                                    <p className="mt-5">Enjoy Palua's Best Mobile Data - Highest LTE Speeds, Biggest Network Coverage, and many Prepaid and Postpaid options.</p>
-                                    <Button asChild className="rounded-full bg-yellow-400 text-black hover:bg-yellow-500 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500 mt-10 p-5 md:p-8 shadow-[6px_6px_0] shadow-gray-500/50">
-                                        <a
-                                            href="https://pnccpalau.smarthub.coop/Login.html"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Learn More
-                                            <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-black">
-                                                <ArrowRight className="h-2 w-2 text-white" />
-                                            </span>
-                                        </a>
-                                    </Button>
-                                </div>
-                                <div className="w-[40%] p-4 hidden md:block">
-                                    <img src="/img/ui/slider/img-01.png" alt="4G Coverage" className="w-full h-auto" />
-                                </div>
-                            </div>
-                        </CarouselItem>
-                    </CarouselContent>
-                    {/* <CarouselPrevious />
-                    <CarouselNext /> */}
-                </Carousel>
+                            </CarouselItem>
+                        </CarouselContent>
+                        {/* <CarouselPrevious />
+                        <CarouselNext /> */}
+                    </Carousel>
+                </div>
             </div>
+            
             {/* [Carousel] ::end */}
+
+            {/* [How can we help?] ::start */}
+            <div className="w-screen">
+                <div className="container mx-auto items-center justify-center py-20">
+                    <h2 className="text-3xl md:text-6xl font-extrabold text-center text-[#2babe2]">How can we help?</h2>
+                    
+                    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/cart.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Buy Prepaid Airtime or Internet Online
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/hand-cursor.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Pay my bill online, view bill history and check postpaid mobile data usage
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/hand-cursor.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Pay my bill online <br />
+                                    (no registration required)
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/app.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Download the SmartHub App
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/swim-ring.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Customer Support: <br />
+                                    Call 611
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center p-5">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center">
+                                <img src="/img/ui/icons/rewards.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
+                                <p className="text-[#f96166] font-bold">
+                                    Unlock exclusive rewards
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* [How can we help?] ::end */}
 
             {/* [Why PNCC?] ::start */}
             <div className="w-screen bg-[#2babe2]">
