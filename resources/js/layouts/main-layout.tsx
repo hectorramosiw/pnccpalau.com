@@ -53,7 +53,7 @@ export default function App({ children }: PropsWithChildren) {
                     </div>
                     {/* [Seatch] ::end */}
                 </div>
-                <div className="container flex max-w-screen-2xl items-center mx-auto bg-[#0a2239] text-white rounded-none md:rounded-lg px-2">
+                <div className="container flex items-center mx-auto bg-[#0a2239] text-white rounded-none md:rounded-lg px-2">
                     {/* [Mobile Header Layout (Hamburger menu left, Logo center, MyPNCC button right)] ::start */}
                     <div className="flex justify-between items-center w-full md:hidden">
                         
