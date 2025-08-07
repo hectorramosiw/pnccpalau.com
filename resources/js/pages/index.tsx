@@ -114,6 +114,45 @@ export default function Index() {
             
             {/* [Carousel] ::end */}
 
+            {/* [Products & Services] ::start */}
+            <div className="w-screen">
+                <h2 className="text-3xl md:text-6xl font-extrabold text-center text-[#2babe2]">Products & Services</h2>
+                <div className="container mx-auto mt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="flex flex-col p-5">
+                            <div className="flex flex-col flex-1 bg-gray-100 rounded-xl bg-gradient-to-b from-[#39c4bf] to-[#f6b8b4] relative px-5 pt-20">
+                                <h3 className="text-4xl text-center font-extrabold text-white mb-2">Residential & Personal</h3>
+                                <p className="text-2xl text-white text-center mb-10">Palau's One-Stop Shop for Home & <br /> Personal Telecom</p>
+                                <img src="/img/pages/index/img-02.png" alt="4G Coverage" className="w-auto h-auto" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col p-5">
+                            <div className="flex flex-col flex-1 bg-gray-100 rounded-xl bg-gradient-to-b from-[#39c4bf] to-[#f6b8b4] relative px-5 pt-20">
+                                <h3 className="text-4xl text-center font-extrabold text-white mb-2">Business</h3>
+                                <p className="text-2xl text-white text-center mb-10">Reliable internet, voice, and TV solutions <br /> for Palau's businesses</p>
+                                <img src="/img/pages/index/img-03.png" alt="4G Coverage" className="w-auto h-auto" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col p-5">
+                            <div className="flex flex-col flex-1 bg-gray-100 rounded-xl bg-gradient-to-b from-[#39c4bf] to-[#f6b8b4] relative px-5 pt-20">
+                                <h3 className="text-4xl text-center font-extrabold text-white mb-2">Visitors</h3>
+                                <p className="text-2xl text-white text-center mb-10">Palau's fastest LTE with prepaid SIMs <br /> in downtown Koror</p>
+                                <img src="/img/pages/index/img-04.png" alt="4G Coverage" className="w-[auto] h-auto" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col p-5">
+                            <div className="flex flex-col flex-1 bg-gray-100 rounded-xl bg-gradient-to-b from-[#39c4bf] to-[#f6b8b4] relative px-5 pt-20">
+                                <h3 className="text-4xl text-center font-extrabold text-white mb-2">Bundles</h3>
+                                <p className="text-2xl text-white text-center mb-10">Save on prepaid data, voice & internet with <br /> PNCC's latest bundles and promps</p>
+                                <img src="/img/pages/index/img-05.png" alt="4G Coverage" className="w-auto h-auto" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* [Products & Services] ::end */}
+
+
             {/* [How can we help?] ::start */}
             <div className="w-screen">
                 <div className="container mx-auto items-center justify-center py-20">
