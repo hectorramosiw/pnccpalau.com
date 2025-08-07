@@ -12,6 +12,30 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Phone } from 'lucide-react';
 
 export default function Index() {
+    const backgroundShapes = `
+        before:content-['']
+        before:absolute
+        before:top-0
+        before:right-0
+        before:w-[300px]
+        before:h-[300px]
+        before:bg-no-repeat
+        before:bg-cover
+        before:bg-right
+        before:bg-[url('/img/ui/backgrounds/shell-2.png')]
+        before:z-0
+        after:content-['']
+        after:absolute
+        after:bottom-0
+        after:left-0
+        after:w-[300px]
+        after:h-[300px]
+        after:bg-no-repeat
+        after:bg-cover
+        after:bg-left
+        after:bg-[url('/img/ui/backgrounds/shell.png')]
+        after:z-0
+    `;
     return (
         <MainLayout>
             {/* [Header] ::start */}
@@ -160,7 +184,7 @@ export default function Index() {
                     
                     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-01.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-01.png')] before:z-0">
                                 <img src="/img/ui/icons/cart.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Buy Prepaid Airtime or Internet Online
@@ -168,7 +192,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-[100px] before:h-[100px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-02.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-[100px] before:h-[100px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-02.png')] before:z-0">
                                 <img src="/img/ui/icons/hand-cursor.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Pay my bill online, view bill history and check postpaid mobile data usage
@@ -176,7 +200,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-03.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-03.png')] before:z-0">
                                 <img src="/img/ui/icons/hand-cursor.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Pay my bill online <br />
@@ -185,7 +209,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-[120px] before:h-[120px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-04.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-[120px] before:h-[120px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-04.png')] before:z-0">
                                 <img src="/img/ui/icons/app.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Download the SmartHub App
@@ -193,7 +217,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-05.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-[150px] before:h-[150px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-05.png')] before:z-0">
                                 <img src="/img/ui/icons/swim-ring.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Customer Support: <br />
@@ -202,7 +226,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center p-5">
-                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-[120px] before:h-[120px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/img-06.png')] before:z-0">
+                            <div className="rounded-xl bg-gray-200/70 w-full h-full p-20 text-center relative before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-[120px] before:h-[120px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/backgrounds/img-06.png')] before:z-0">
                                 <img src="/img/ui/icons/rewards.svg" alt="PNCC Palau Logo" className="h-auto w-16 mx-auto" />
                                 <p className="text-[#f96166] font-bold">
                                     Unlock exclusive rewards
@@ -215,10 +239,7 @@ export default function Index() {
             {/* [How can we help?] ::end */}
 
             {/* [Why PNCC?] ::start */}
-            <div className="w-screen bg-[#2babe2] relative
-                before:content-[''] before:absolute before:top-0 before:right-0 before:w-[300px] before:h-[300px] before:bg-no-repeat before:bg-cover before:bg-right before:bg-[url('/img/ui/bakgrounds/shell-2.png')] before:z-0
-                after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[300px] after:h-[300px] after:bg-no-repeat after:bg-cover after:bg-left after:bg-[url('/img/ui/bakgrounds/shell.png')] after:z-0"
-            >
+            <div className={`w-screen bg-[#2babe2] relative ${backgroundShapes}`}>
 
                 <div className="container mx-auto py-15 relative z-10">
                     <div className="flex flex-col md:flex-row items-center justify-items-center">
