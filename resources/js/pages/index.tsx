@@ -1,4 +1,3 @@
-import MainLayout from '@/layouts/main-layout';
 import { Head } from '@inertiajs/react';
 import {
     Carousel,
@@ -37,7 +36,7 @@ export default function Index() {
         after:z-0
     `;
     return (
-        <MainLayout>
+        <>
             {/* [Header] ::start */}
             <Head>
                 <title>Home</title>
@@ -285,6 +284,6 @@ export default function Index() {
                 </div>
             </div>
             {/* [Let's Connect] ::end */}
-        </MainLayout>
+        </>
     );
 }
