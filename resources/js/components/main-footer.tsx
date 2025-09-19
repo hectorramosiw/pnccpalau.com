@@ -29,27 +29,27 @@ export default function MainFooter() {
                     <div>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('residential-and-personal.mobile')} className="text-neutral-300 transition-colors hover:text-white">
                                     Mobile
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('residential-and-personal.internet')} className="text-neutral-300 transition-colors hover:text-white">
                                     Internet
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('residential-and-personal.telephone')} className="text-neutral-300 transition-colors hover:text-white">
                                     Telephone
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('residential-and-personal.digital-tv')} className="text-neutral-300 transition-colors hover:text-white">
                                     Digital TV
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('residential-and-personal.special-offers')} className="text-neutral-300 transition-colors hover:text-white">
                                     Special Offers & Bundles
                                 </Link>
                             </li>
@@ -58,7 +58,7 @@ export default function MainFooter() {
                     <div>
                         <ul className="space-y-2">
                             <li>
-                                <Link href={route('general.policies')} className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href="#" className="text-neutral-300 transition-colors hover:text-white">
                                     Mobile Support
                                 </Link>
                             </li>
@@ -102,9 +102,9 @@ export default function MainFooter() {
                     <div>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('about-pncc')} className="text-neutral-300 transition-colors hover:text-white">
                                     About Us
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="text-neutral-300 transition-colors hover:text-white">
@@ -127,14 +127,14 @@ export default function MainFooter() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('site.map')} className="text-neutral-300 transition-colors hover:text-white">
                                     Site Map
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('general.policies')} className="text-neutral-300 transition-colors hover:text-white">
                                     General Policies
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="text-neutral-300 transition-colors hover:text-white">
@@ -142,14 +142,14 @@ export default function MainFooter() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('subscribe.newsletter')} className="text-neutral-300 transition-colors hover:text-white">
                                     Newsletter
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-neutral-300 transition-colors hover:text-white">
+                                <Link href={route('rfp')} className="text-neutral-300 transition-colors hover:text-white">
                                     RFP
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
