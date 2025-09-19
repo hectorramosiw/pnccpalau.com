@@ -24,29 +24,23 @@ This project is configured to work well with Laravel Herd.
 
 ## Creating a New Project (From Scratch)
 
-The following instructions are for creating a brand new project from scratch using Laravel and the Breeze starter kit with React.
+The following instructions are for creating a brand new project from scratch using the Laravel Installer with the React starter kit.
 
-1.  **Create a New Laravel Project**
-    Use Composer to create a new Laravel application.
+1.  **Prerequisite: Laravel Installer**
+    Ensure you have the [Laravel Installer](https://laravel.com/docs/installation#the-laravel-installer) installed globally via Composer.
     ```bash
-    composer create-project laravel/laravel my-new-app
+    composer global require laravel/installer
+    ```
+
+2.  **Create the New Project**
+    Run the `laravel new` command with the `--breeze` and `--react` flags. This single command will create the Laravel project and scaffold the entire React starter kit, including authentication.
+    ```bash
+    laravel new my-new-app --breeze --react
     cd my-new-app
     ```
 
-2.  **Install Laravel Breeze**
-    Add the Laravel Breeze package to your project's development dependencies.
-    ```bash
-    composer require laravel/breeze --dev
-    ```
-
-3.  **Install the React Starter Kit**
-    Run the `breeze:install` Artisan command with the `react` option. This will scaffold out the frontend with all the necessary authentication views and logic.
-    ```bash
-    php artisan breeze:install react
-    ```
-
-4.  **Finalize Installation**
-    Once Breeze is installed, you can proceed with the standard setup steps:
+3.  **Finalize Installation**
+    Once the project is created, you can proceed with the standard setup steps:
     - Install the frontend dependencies: `npm install`
     - Configure your `.env` file.
     - Run the database migrations: `php artisan migrate`
